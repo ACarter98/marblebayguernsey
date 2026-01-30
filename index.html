@@ -126,6 +126,11 @@
             text-align: center;
             padding: 40px 24px;
         }
+            .gallery {display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 20px;margin: 40px 0;}
+        .gallery img {width: 100%;height: 220px;object-fit: cover;border-radius: 12px;transition: transform 0.3s;box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .gallery img:hover {transform: translateY(-4px);box-shadow: 0 12px 24px rgba(0,0,0,0.15);}
+        .gallery img:first-child {grid-column: 1 / -1;height: 400px;}
+        @media(max-width:768px){{.gallery img:first-child {{height: 250px}}}}
     </style>
 </head>
 <body>
@@ -152,6 +157,20 @@
         <h3>Photography Hotspot</h3>
         <p>Photographers are drawn to the contrast between the smooth, patterned rocks and the rough Atlantic waves. The best shots are taken at low tide when the formations are fully exposed, or during storm conditions when waves crash dramatically against the rocks.</p>
         
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="section">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery">
+                <img src="photo-1.jpg" alt="Marble Bay" loading="lazy">
+                <img src="photo-2.jpg" alt="Marble Bay" loading="lazy">
+                <img src="photo-3.jpg" alt="Marble Bay" loading="lazy">
+                <img src="photo-4.jpg" alt="Marble Bay" loading="lazy">
+                <img src="photo-5.jpg" alt="Marble Bay" loading="lazy">
             </div>
         </div>
     </section>
